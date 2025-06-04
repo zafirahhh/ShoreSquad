@@ -295,6 +295,40 @@ body {
   background: linear-gradient(45deg, #f8f9fa, var(--neutral-sand));
 }
 
+.map-embed {
+  padding: 0;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 0 0 15px 15px;
+}
+
+.map-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+.map-info p {
+  margin: 0.2rem 0;
+  color: var(--text-dark);
+}
+
+.map-info strong {
+  color: var(--accent-coral);
+}
+
 .map-placeholder p:first-child,
 .weather-placeholder p:first-child {
   font-size: 2rem;
@@ -431,6 +465,16 @@ body {
 
   .map-weather-grid {
     grid-template-columns: 1fr;
+  }
+
+  .map-embed iframe {
+    height: 300px;
+  }
+
+  .map-info {
+    position: static;
+    margin-top: 0.5rem;
+    text-align: center;
   }
 
   .features-grid {
